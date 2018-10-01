@@ -4,6 +4,9 @@ Repository di TPSIT della classe 4J
 ## Introduzione
 - [concetti fondamentali dell'informatica](http://aptiva.v2.cs.unibo.it/wiki/index.php/Concetti_fondamentali_dell%27Informatica)
 
+## HTML
+- [HTML](https://www.codecademy.com/learn/learn-html)
+
 ## javascript
 - [esempi codice javascript su w3schools](https://www.w3schools.com/js/js_examples.asp)
 - [tutorial javascript su sololearn](https://www.sololearn.com/Play/JavaScript/)
