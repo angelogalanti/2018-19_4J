@@ -15,6 +15,5 @@ Repository di TPSIT della classe 4J
 - [Three Ways to Insert CSS](https://www.w3schools.com/Css/css_howto.asp)
 
 ## Javascript
-~~- [esempi codice javascript su w3schools](https://www.w3schools.com/js/js_examples.asp)
+- [esempi codice javascript su w3schools](https://www.w3schools.com/js/js_examples.asp)
 - [tutorial javascript su sololearn](https://www.sololearn.com/Play/JavaScript/)
-~~
