@@ -1,8 +1,6 @@
 # 2018-19_4J
 Repository di TPSIT della classe 4J
 
-## [Link](https://goo.gl/forms/pWNi0TIPWTlDACjq2) **alla verifica del 16/10/18**
-
 ## [Link](https://script.google.com/macros/s/AKfycbx3Mn36N3G4CfGV-ju_NDdMtc9tr9-tkwm4Md-Xrei6GoYffiAs/exec) **per fare l'upload delle verifiche**
 
 ## Introduzione
