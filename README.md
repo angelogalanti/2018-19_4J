@@ -22,6 +22,16 @@ Repository di TPSIT della classe 4J
 - [jQuery sito ufficiale](http://jquery.com/download/)
 - [tutorial jQuery su codecademy](https://www.codecademy.com/learn/learn-jquery)
 
+aggiungere esercizi 
+03
+04
+09 modificato
+14
+15 lungo ma interessante difficile
+16
+
+
+
 ## Javascript
 - [esempi codice javascript su w3schools](https://www.w3schools.com/js/js_examples.asp)
 - [tutorial javascript su sololearn](https://www.sololearn.com/Play/JavaScript/)
