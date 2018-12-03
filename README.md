@@ -20,8 +20,14 @@ Repository di TPSIT della classe 4J
 - [jQuery teoria ed esempi](https://www.w3schools.com/jquery/default.asp)
 - [jQuery market share](https://w3techs.com/technologies/overview/javascript_library/all)
 - [jQuery sito ufficiale](http://jquery.com/download/)
-- [tutorial jQuery su codecademy](https://www.codecademy.com/learn/learn-jquery)
 
+### jQuery esercizi
+- [In questa cartella](https://github.com/angelogalanti/2018-19_4J/tree/master/jQuery%20Esercizi).
+Svolgere prima l'esercizio 18 del 17. Per i risolvere i due esercizi usare la proprietà [lenght](https://api.jquery.com/length/).
+
+
+<!--
+tutorial jQuery su codecademy (https://www.codecademy.com/learn/learn-jquery)
 aggiungere esercizi 
 03
 04
@@ -29,9 +35,12 @@ aggiungere esercizi
 14
 15 lungo ma interessante difficile
 16
+-->
 
 
 
+<!--
 ## Javascript
 - [esempi codice javascript su w3schools](https://www.w3schools.com/js/js_examples.asp)
 - [tutorial javascript su sololearn](https://www.sololearn.com/Play/JavaScript/)
+-->
