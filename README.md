@@ -26,6 +26,9 @@ Repository di TPSIT della classe 4J
 Svolgere prima l'esercizio 18 del 17. Per i risolvere i due esercizi usare la proprietà [length](https://api.jquery.com/length/). Aggiunti esercizi 26 e 27.
 
 
+## javascript
+- [leggere un valore](https://www.w3schools.com/jsref/dom_obj_text.asp)
+
 <!--
 tutorial jQuery su codecademy (https://www.codecademy.com/learn/learn-jquery)
 aggiungere esercizi 
