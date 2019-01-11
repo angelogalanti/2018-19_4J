@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Simple calculator</h3>
+
+<input type="text" id="firstNumber" value="32"></br>
+<input type="text" id="operator" value="+"></br>
+<input type="text" id="secondNumber" value="12"></br>
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculate() {
+  var firstNumber = parseInt(document.getElementById("firstNumber").value);
+  var secondNumber = parseInt(document.getElementById("secondNumber").value);
+  var result;
+  if (document.getElementById("operator").value == "+") {
+  	result = firstNumber + secondNumber;
+  } else if (document.getElementById("operator").value == "-") {
+  	result = firstNumber - secondNumber;
+  } else if (document.getElementById("operator").value == "*") {
+  	result = firstNumber * secondNumber;
+  } else if (document.getElementById("operator").value == "/") {
+  	result = firstNumber / secondNumber;
+  } else {
+  	result = "error"
+  }
+  
+  document.getElementById("result").innerHTML = result;
+
+}
+
+calculate();
+
+</script>
+
+</body>
+</html>
