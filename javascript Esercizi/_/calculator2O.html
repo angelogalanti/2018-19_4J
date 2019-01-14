@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="calculator2.css">
+<body>
+
+<div class="calculator">
+
+  <input type="text" id="calculator-screen" class="calculator-screen" value="" />
+  
+  <div class="calculator-keys">
+    
+    <button type="button" class="operator" value="+" onclick="addToExpression('+')">+</button>
+    <button type="button" class="operator" value="-" onclick="addToExpression('-')">-</button>
+    <button type="button" class="operator" value="*" onclick="addToExpression('*')">&times;</button>
+    <button type="button" class="operator" value="/" onclick="addToExpression('/')">&divide;</button>
+    <button type="button" value="7" onclick="addToExpression(7)">7</button>
+    <button type="button" value="8" onclick="addToExpression(8)">8</button>
+    <button type="button" value="9" onclick="addToExpression(9)">9</button>
+    <button type="button" value="4" onclick="addToExpression(4)">4</button>
+    <button type="button" value="5" onclick="addToExpression(5)">5</button>
+    <button type="button" value="6" onclick="addToExpression(6)">6</button>
+    <button type="button" value="1" onclick="addToExpression(1)">1</button>
+    <button type="button" value="2" onclick="addToExpression(2)">2</button>
+    <button type="button" value="3" onclick="addToExpression(3)">3</button>
+    <button type="button" value="0" onclick="addToExpression(0)">0</button>
+    <button type="button" class="decimal" value="." onclick="addToExpression('.')">.</button>
+    <button type="button" class="all-clear" value="all-clear" onclick="clearInput()">AC</button>
+    <button type="button" class="equal-sign operator" value="=" onclick="calculate()">=</button>
+
+  </div>
+</div>
+
+
+<script>
+
+// var expr = "";
+
+// function addToExpression(value) {
+//   console.log("addToExpression");
+// }
+
+// function showInput(expr) {
+//   console.log("showInput");
+// }
+
+// function calculate() {
+//   console.log("calculate");
+//   // use function eval
+//   // https://www.w3schools.com/jsref/jsref_eval.asp
+// }
+
+// function clearInput() {
+//   console.log("clearInput");
+// }
+
+// 1. leggi il codice html di questo file
+// 2. apri questo file nel browser e cerca di capire come funziona ispezionando tramite la console del browser
+// 3. leggi il codice javascript commentato sopra
+// 4. crea una copia di questo file cancellando il codice offuscato javascript sotto
+// 5. risolvi l'esercizio partendo dal codice sopra completandolo opportunamente 
+
+var _0x4048=['calculate','clearInput','log','getElementById','value'];(function(_0x39384c,_0x3556d0){var _0x4c7bd9=function(_0x3fc169){while(--_0x3fc169){_0x39384c['push'](_0x39384c['shift']());}};_0x4c7bd9(++_0x3556d0);}(_0x4048,0x115));var _0x12da=function(_0x1991e2,_0x527bea){_0x1991e2=_0x1991e2-0x0;var _0x2e3b02=_0x4048[_0x1991e2];return _0x2e3b02;};var expr='';function addToExpression(_0x57e199){console['log']('addToExpression');expr=expr+_0x57e199;showInput(expr);}function showInput(_0x582a7f){console[_0x12da('0x0')]('showInput');document[_0x12da('0x1')]('calculator-screen')[_0x12da('0x2')]=_0x582a7f;}function calculate(){console['log'](_0x12da('0x3'));var _0x29f238=eval(expr);document[_0x12da('0x1')]('calculator-screen')[_0x12da('0x2')]=_0x29f238;expr=_0x29f238;}function clearInput(){console[_0x12da('0x0')](_0x12da('0x4'));expr='';showInput(expr);}
+
+
+</script>
+
+</body>
+</html>
