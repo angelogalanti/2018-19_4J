@@ -30,8 +30,8 @@ Svolgere prima l'esercizio 18 del 17. Per i risolvere i due esercizi usare la pr
 - [leggere un valore](https://www.w3schools.com/jsref/dom_obj_text.asp)
 
 ### javascript esercizi
-- [calcolatrice](https://github.com/angelogalanti/2018-19_4J/blob/master/javascript%20Esercizi/calculatorO.html)
-- [calcolatrice2](https://github.com/angelogalanti/2018-19_4J/blob/master/javascript%20Esercizi/calculator2O.html)
+- [calcolatrice](https://github.com/angelogalanti/2018-19_4J/tree/master/javascript%20Esercizi/)
+- [calcolatrice2](https://github.com/angelogalanti/2018-19_4J/tree/master/javascript%20Esercizi/)
 
 <!--
 tutorial jQuery su codecademy (https://www.codecademy.com/learn/learn-jquery)
