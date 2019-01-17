@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="calculator2.css">
+<body>
+
+<div class="calculator">
+
+  <input type="text" id="calculator-screen" class="calculator-screen" value="" />
+  
+  <div class="calculator-keys">
+    
+    <button type="button" class="operator" value="+" onclick="addToExpression('+')">+</button>
+    <button type="button" class="operator" value="-" onclick="addToExpression('-')">-</button>
+    <button type="button" class="operator" value="*" onclick="addToExpression('*')">&times;</button>
+    <button type="button" class="operator" value="/" onclick="addToExpression('/')">&divide;</button>
+    <button type="button" value="7" onclick="addToExpression(7)">7</button>
+    <button type="button" value="8" onclick="addToExpression(8)">8</button>
+    <button type="button" value="9" onclick="addToExpression(9)">9</button>
+    <button type="button" value="4" onclick="addToExpression(4)">4</button>
+    <button type="button" value="5" onclick="addToExpression(5)">5</button>
+    <button type="button" value="6" onclick="addToExpression(6)">6</button>
+    <button type="button" value="1" onclick="addToExpression(1)">1</button>
+    <button type="button" value="2" onclick="addToExpression(2)">2</button>
+    <button type="button" value="3" onclick="addToExpression(3)">3</button>
+    <button type="button" value="0" onclick="addToExpression(0)">0</button>
+    <button type="button" class="decimal" value="." onclick="addToExpression('.')">.</button>
+    <button type="button" class="all-clear" value="all-clear" onclick="clearInput()">AC</button>
+    <button type="button" class="equal-sign operator" value="=" onclick="calculate()">=</button>
+
+  </div>
+</div>
+
+
+<script>
+
+var expr = "";
+
+function addToExpression(value) {
+  console.log("addToExpression");
+  expr = expr + value;
+  showInput(expr);
+}
+
+function showInput(expr) {
+  console.log("showInput");
+  document.getElementById("calculator-screen").value = expr;
+}
+
+function calculate() {
+  console.log("calculate");
+  // use function eval
+  // https://www.w3schools.com/jsref/jsref_eval.asp
+  var result = eval(expr);
+  document.getElementById("calculator-screen").value = result;
+  expr = result;
+}
+
+function clearInput() {
+  console.log("clearInput");
+  expr = "";
+  showInput(expr);
+}
+
+</script>
+
+</body>
+</html>
