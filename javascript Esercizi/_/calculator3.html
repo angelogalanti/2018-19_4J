@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!-- <link rel="stylesheet" type="text/css" href="calculator2.css"> -->
+<body>
+
+<div class="calculator">
+
+  <input type="text" id="calculator-screen" class="calculator-screen" value="" />
+  <p id='result'></p>
+  
+  <div class="calculator-keys">
+    <button type="button" value="" onclick="squareNumber()">squareNumber</button><br><br>
+    <button type="button" value="" onclick="halfNumber()">halfNumber</button><br><br>
+    <button type="button" value="" onclick="clearInput()">clearInput</button><br><br>
+  </div>
+</div>
+
+
+<script>
+
+function readValue() {
+  var value = document.getElementById("calculator-screen").value;
+  return value;  
+}
+
+function writeValue(value) {
+  document.getElementById("result").innerHTML = value;
+}
+
+function squareNumber() {
+  console.log("squareNumber");
+  var number = readValue();
+  var result = number*number;
+  writeValue(result);
+}
+
+function halfNumber() {
+  console.log("halfNumber");
+  var number = readValue();
+  var result = number/2;
+  writeValue(result);
+}
+
+function percentOf() {
+  console.log("percentOf");
+  var number = readValue();
+  var result = number/2;
+  writeValue(result);
+}
+
+function clearInput() {
+  console.log("clearInput");
+  document.getElementById("calculator-screen").value = "";
+}
+
+</script>
+
+</body>
+</html>
