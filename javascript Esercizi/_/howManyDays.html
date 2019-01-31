@@ -52,7 +52,29 @@ per risolvere l'esercizio
 
 <script type="text/javascript">
 
-var _0x311d=['result','innerHTML','date','getTime','abs','round','getElementById'];(function(_0xd4b636,_0x4f6c54){var _0x422567=function(_0x519b91){while(--_0x519b91){_0xd4b636['push'](_0xd4b636['shift']());}};_0x422567(++_0x4f6c54);}(_0x311d,0x136));var _0x3bd6=function(_0x2be162,_0x15dd02){_0x2be162=_0x2be162-0x0;var _0x34f5f2=_0x311d[_0x2be162];return _0x34f5f2;};function howManyDays(){var _0x119e33=document['getElementById'](_0x3bd6('0x0'))['value'];var _0x50061a=new Date(_0x119e33);var _0x538a54=new Date();var _0xda0cec=0x3e8*0x3c*0x3c*0x18;var _0x2ec614=_0x50061a[_0x3bd6('0x1')]();var _0x3901e8=_0x538a54[_0x3bd6('0x1')]();var _0x34224e=Math[_0x3bd6('0x2')](_0x2ec614-_0x3901e8);var _0x323cc2=Math[_0x3bd6('0x3')](_0x34224e/_0xda0cec);document[_0x3bd6('0x4')](_0x3bd6('0x5'))[_0x3bd6('0x6')]=_0x323cc2;}
+  function howManyDays() {
+    var dateAsString = document.getElementById("date").value; //string
+    var date = new Date(dateAsString); //date
+    var now = new Date();
+
+    // The number of milliseconds in one day
+    var one_day = 1000 * 60 * 60 * 24;
+
+    // Convert both dates to milliseconds
+    var date_ms = date.getTime();
+    var now_ms = now.getTime();
+
+    // Calculate the difference in milliseconds
+    var difference_ms = Math.abs(date_ms - now_ms);
+
+    // Convert back to days and return
+    var result = Math.round(difference_ms/one_day);
+
+    document.getElementById('result').innerHTML = result;
+
+
+  }
+
 </script>
 </body>
 </html>
