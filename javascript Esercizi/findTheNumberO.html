@@ -1,0 +1,57 @@
+<!-- 
+Indovina il numero
+3 livelli di difficoltà:
+- facile: numero da 1 a 3
+- medio: numero da 1 a 10
+- difficile: numero da 1 a 100
+(nell'esempio funziona solo difficoltà facile)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="col-sm-12">
+      <h2>Indovina il numero</h2>
+      <form>
+        <div class="form-group">
+          Seleziona la difficoltà:
+          <button type="button" class="btn btn-primary" onclick="generateNumber(1)">Facile</button>      
+          <button type="button" class="btn btn-primary" onclick="generateNumber(2)">Medio</button>      
+          <button type="button" class="btn btn-primary" onclick="generateNumber(3)">Difficile</button>  
+          <br>
+          <br>
+          Prova ad indovinare:
+          <input type="text" class="form-control" id="guess">          
+          <br>
+          <button type="button" class="btn btn-primary" onclick="guessNumber()">Indovina</button>      
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="col-sm-12">
+      <div id="changeColor" class="panel panel-default">
+        <div class="panel-heading">Scrivi qui il risultato</div>
+        <div id="result" class="panel-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+var _0xed1f=['log','Hai\x20indovinato','Troppo\x20grande','floor','generated\x20number\x20','getElementById','guess','value'];(function(_0x24056a,_0x18d346){var _0x3e8b0c=function(_0xa6069f){while(--_0xa6069f){_0x24056a['push'](_0x24056a['shift']());}};_0x3e8b0c(++_0x18d346);}(_0xed1f,0xdb));var _0x2693=function(_0x29fe23,_0x915531){_0x29fe23=_0x29fe23-0x0;var _0x311212=_0xed1f[_0x29fe23];return _0x311212;};var numberToGuess;function generateNumber(_0x2d8783){numberToGuess=Math[_0x2693('0x0')](Math['random']()*0x3)+0x1;console['log'](_0x2693('0x1')+numberToGuess);}function guessNumber(){var _0x3c2f81;var _0x5d6029=document[_0x2693('0x2')](_0x2693('0x3'))[_0x2693('0x4')];console[_0x2693('0x5')]('inserted\x20number\x20'+_0x5d6029);if(numberToGuess==_0x5d6029){_0x3c2f81=_0x2693('0x6');}else if(numberToGuess<_0x5d6029){_0x3c2f81=_0x2693('0x7');}else{_0x3c2f81='Troppo\x20piccolo';}document[_0x2693('0x2')]('result')['innerHTML']=_0x3c2f81;}
+
+</script>
+</body>
+</html>
