@@ -1,0 +1,47 @@
+<!-- 
+Genera un array di lunghezza random 
+che va da un minimo di 5 elementi 
+ad un massimo di 10 elementi
+Gli elementi dell'array sono 
+numeri casuali tra 0 ed 8
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="col-sm-12">
+      <h2>Crea array casuale</h2>
+      <form>
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-primary" onclick="showArray()">Crea</button>      
+          <button type="button" class="btn btn-primary" onclick="orderArray()">Ordina</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>  
+  <br>
+  <div class="container">
+    <div class="col-sm-12">
+      <div id="changeColor" class="panel panel-default">
+        <div id="result-heading" class="panel-heading">Scrivi qui il risultato</div>
+        <div id="result-body" class="panel-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+var _0x5514=['innerHTML','length','result-body','Array\x20non\x20creato!','Array\x20Ordinato','floor','random','log','generated\x20array\x20','getElementById','result-heading'];(function(_0x87e8d8,_0x5f000c){var _0xc237d1=function(_0x2f1466){while(--_0x2f1466){_0x87e8d8['push'](_0x87e8d8['shift']());}};_0xc237d1(++_0x5f000c);}(_0x5514,0x1f4));var _0xd1f3=function(_0x2d8f05,_0x4b81bb){_0x2d8f05=_0x2d8f05-0x0;var _0x4d74cb=_0x5514[_0x2d8f05];return _0x4d74cb;};var array=[];function generateNumber(_0x1a6c31,_0x121cde){number=Math[_0xd1f3('0x0')](Math[_0xd1f3('0x1')]()*(_0x121cde-_0x1a6c31))+_0x1a6c31;return number;}function generateArray(_0x420077,_0x42610a){for(var _0x12d7fe=0x0;_0x12d7fe<_0x420077;_0x12d7fe++){array['push'](generateNumber(0x0,_0x42610a));}console[_0xd1f3('0x2')](_0xd1f3('0x3')+array);return array;}function showArray(){var _0xa8b788=generateNumber(0x5,0xa);array=[];array=generateArray(_0xa8b788,0x8);document[_0xd1f3('0x4')](_0xd1f3('0x5'))['innerHTML']='Generato\x20array\x20di\x20dimensione:\x20'+_0xa8b788;document[_0xd1f3('0x4')]('result-body')[_0xd1f3('0x6')]=array;}function orderArray(){if(array[_0xd1f3('0x7')]==0x0){document[_0xd1f3('0x4')](_0xd1f3('0x5'))[_0xd1f3('0x6')]='Errore';document['getElementById'](_0xd1f3('0x8'))[_0xd1f3('0x6')]=_0xd1f3('0x9');}else{array['sort']();document[_0xd1f3('0x4')](_0xd1f3('0x5'))[_0xd1f3('0x6')]=_0xd1f3('0xa');document[_0xd1f3('0x4')](_0xd1f3('0x8'))[_0xd1f3('0x6')]=array;}}
+</script>
+</body>
+</html>
