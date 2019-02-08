@@ -1,0 +1,80 @@
+<!-- 
+Indovina il numero
+3 livelli di difficoltà:
+- facile: numero da 1 a 3
+- medio: numero da 1 a 10
+- difficile: numero da 1 a 100
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="col-sm-12">
+      <h2>Indovina il numero</h2>
+      <form>
+        <div class="form-group">
+          Seleziona la difficoltà:
+          <button type="button" class="btn btn-primary" onclick="generateNumber(1)">Facile</button>      
+          <button type="button" class="btn btn-primary" onclick="generateNumber(2)">Medio</button>      
+          <button type="button" class="btn btn-primary" onclick="generateNumber(3)">Difficile</button>  
+          <br>
+          <br>
+          Prova ad indovinare:
+          <input type="text" class="form-control" id="guess">          
+          <br>
+          <button type="button" class="btn btn-primary" onclick="guessNumber()">Indovina</button>      
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="col-sm-12">
+      <div id="changeColor" class="panel panel-default">
+        <div class="panel-heading">Scrivi qui il risultato</div>
+        <div id="result" class="panel-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    var numberToGuess;
+
+    function generateNumber(difficulty) {
+      numberToGuess = Math.floor(Math.random()*3)+1;
+      console.log("generated number " + numberToGuess)
+    }
+
+
+    function guessNumber() {
+      var result;
+      var numberInserted = document.getElementById("guess").value;
+      console.log("inserted number " + numberInserted)
+
+      if (numberToGuess == numberInserted) {
+        result = "Hai indovinato";
+      } else if (numberToGuess < numberInserted) {
+        result = "Troppo grande";
+      } else {
+        result = "Troppo piccolo";
+      }
+
+      document.getElementById('result').innerHTML = result;
+
+  }
+
+</script>
+</body>
+</html>

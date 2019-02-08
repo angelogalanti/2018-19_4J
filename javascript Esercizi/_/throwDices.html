@@ -1,0 +1,101 @@
+<!-- 
+Creare una pagina HTML che lancia due dadi
+e controlla se i valori usciti sono uguali
+se i valori sono uguali mostra la seguente frase:
+I valori sono uguali
+ed il pannello corrispondente si colora di verde
+se i valori sono diversi mostra la seguente frase:
+I valori sono diversi
+ed il pannello corrispondente si colora di rosso
+
+Come creare numeri casuali?
+Math.random()
+
+Come si colorano i pannelli?
+https://www.w3schools.com/bootstrap/bootstrap_panels.asp
+
+Come si aggiunge e rimuove una classe ad un tag?
+https://www.w3schools.com/howto/howto_js_add_class.asp
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="col-sm-12">
+      <h2>Lancia due dadi</h2>
+      <form>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" onclick="throwDices()">Lancia</button>      
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="panel-group">
+      <div class="col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Risultato dado 1:</div>
+          <div id="dice1" class="panel-body">...</div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-info">
+          <div class="panel-heading">Risultato dado 2:</div>
+          <div id="dice2" class="panel-body">...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="col-sm-12">
+      <div id="changeColor" class="panel panel-default">
+        <div class="panel-heading">Scrivi qui il risultato</div>
+        <div id="result" class="panel-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    function throwDices() {
+
+      var dice1 = Math.floor(Math.random()*6)+1;
+      var dice2 = Math.floor(Math.random()*6)+1;
+      var result;
+      var element = document.getElementById("changeColor");
+      document.getElementById('dice1').innerHTML = dice1;
+      document.getElementById('dice2').innerHTML = dice2;
+
+      if (dice1 == dice2) {
+        result = "I valori sono uguali";
+        element.classList.remove("panel-default");        
+        element.classList.remove("panel-danger");        
+        element.classList.add("panel-success");        
+      } else {
+        result = "I valori sono diversi";
+        element.classList.remove("panel-default");        
+        element.classList.remove("panel-success");        
+        element.classList.add("panel-danger");        
+      }
+
+      document.getElementById('result').innerHTML = result;
+
+  }
+
+</script>
+</body>
+</html>

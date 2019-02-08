@@ -20,34 +20,9 @@ Repository di TPSIT della classe 4J
 - [jQuery teoria ed esempi](https://www.w3schools.com/jquery/default.asp)
 - [jQuery market share](https://w3techs.com/technologies/overview/javascript_library/all)
 - [jQuery sito ufficiale](http://jquery.com/download/)
-
-### jQuery esercizi
-- [In questa cartella](https://github.com/angelogalanti/2018-19_4J/tree/master/jQuery%20Esercizi).
-Svolgere prima l'esercizio 18 del 17. Per i risolvere i due esercizi usare la proprietà [length](https://api.jquery.com/length/). Aggiunti esercizi 26 e 27.
-
+- [esercizi](https://github.com/angelogalanti/2018-19_4J/tree/master/jQuery%20Esercizi)
 
 ## javascript
 - [leggere un valore](https://www.w3schools.com/jsref/dom_obj_text.asp)
-
-### javascript esercizi
-- [calcolatrice](https://github.com/angelogalanti/2018-19_4J/tree/master/javascript%20Esercizi/)
-- [calcolatrice2](https://github.com/angelogalanti/2018-19_4J/tree/master/javascript%20Esercizi/)
-
-<!--
-tutorial jQuery su codecademy (https://www.codecademy.com/learn/learn-jquery)
-aggiungere esercizi 
-03
-04
-09 modificato
-14
-15 lungo ma interessante difficile
-16
--->
-
-
-
-<!--
-## Javascript
-- [esempi codice javascript su w3schools](https://www.w3schools.com/js/js_examples.asp)
-- [tutorial javascript su sololearn](https://www.sololearn.com/Play/JavaScript/)
--->
+- [cheatsheet](https://github.com/angelogalanti/2018-19_4J/tree/master/w3school_javascript.js)
+- [esercizi](https://github.com/angelogalanti/2018-19_4J/tree/master/javascript%20Esercizi/)

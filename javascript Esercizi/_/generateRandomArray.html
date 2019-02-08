@@ -1,0 +1,84 @@
+<!-- 
+Genera un array di lunghezza random 
+che va da un minimo di 5 elementi 
+ad un massimo di 10 elementi
+Gli elementi dell'array sono 
+numeri casuali tra 0 ed 8
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="col-sm-12">
+      <h2>Crea array casuale</h2>
+      <form>
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-primary" onclick="showArray()">Crea</button>      
+          <button type="button" class="btn btn-primary" onclick="orderArray()">Ordina</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>  
+  <br>
+  <div class="container">
+    <div class="col-sm-12">
+      <div id="changeColor" class="panel panel-default">
+        <div id="result-heading" class="panel-heading">Scrivi qui il risultato</div>
+        <div id="result-body" class="panel-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+
+    var array = [];
+
+    function generateNumber(min,max) {
+      number = Math.floor(Math.random()*(max-min))+min;
+      //console.log("generated number " + number);
+      return number;
+    }
+
+    function generateArray(size,maxNumber) {
+      for (var i = 0; i < size; i++) {
+        array.push(generateNumber(0, maxNumber));
+      }
+      console.log("generated array " + array)
+      return array;
+    }
+
+    function showArray() {
+      var size = generateNumber(5,10);
+      array = [];
+      array = generateArray(size, 8);
+      document.getElementById('result-heading').innerHTML = 
+      "Generato array di dimensione: " + size;
+      document.getElementById('result-body').innerHTML = array;
+    }
+
+    function orderArray() {
+      if (array.length == 0) {
+        document.getElementById('result-heading').innerHTML = "Errore";
+        document.getElementById('result-body').innerHTML = "Array non creato!";
+      } else {
+        array.sort();
+        document.getElementById('result-heading').innerHTML = "Array Ordinato";
+        document.getElementById('result-body').innerHTML = array;
+      }
+
+    }
+
+</script>
+</body>
+</html>
