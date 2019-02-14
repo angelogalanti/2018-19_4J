@@ -1,0 +1,52 @@
+<!-- 
+Indovina il numero
+3 livelli di difficoltà:
+- facile: numero da 1 a 3
+- medio: numero da 1 a 10
+- difficile: numero da 1 a 100
+(nell'esempio funziona solo difficoltà facile)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<form name="imageForm">
+  <table border=3>
+  <tr>
+    <td>
+      <input onclick="displayImage();" type=button value="Display Random Image">
+    </td>
+  </tr>
+  <tr>
+    <td id="here">
+      <img src="blank.jpg" alt="no image!" name="canvas" />
+    </td>
+  </tr>
+  </table>
+</form>
+
+  <script type="text/javascript">
+  var imagesArray = ["dog.jpg", "fox.jpg", "mouse.jpg", "alligator.jpg", "fish.jpg", "parrot.jpg", "cat.jpg"];
+
+  function displayImage(){
+      var num = Math.floor(Math.random() * 7); // 0...6
+      img = './'+ imagesArray[num];
+      var imgStr = '<img src="' + img + '" alt = "' + imagesArray[num] + '">';
+      document.getElementById("here").innerHTML = imgStr
+  }
+
+
+
+</script>
+</body>
+</html>
