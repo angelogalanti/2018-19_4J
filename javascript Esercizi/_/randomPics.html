@@ -1,3 +1,12 @@
+<!-- 
+Indovina il numero
+3 livelli di difficoltà:
+- facile: numero da 1 a 3
+- medio: numero da 1 a 10
+- difficile: numero da 1 a 100
+(nell'esempio funziona solo difficoltà facile)
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +36,15 @@
 </form>
 
   <script type="text/javascript">
-var _0x3b84=['parrot.jpg','cat.jpg','floor','random','\x22\x20alt\x20=\x20\x22','getElementById','fish.jpg'];(function(_0x2d8f05,_0x4b81bb){var _0x4d74cb=function(_0x32719f){while(--_0x32719f){_0x2d8f05['push'](_0x2d8f05['shift']());}};_0x4d74cb(++_0x4b81bb);}(_0x3b84,0x110));var _0x9aaf=function(_0x4b315c,_0x2d152c){_0x4b315c=_0x4b315c-0x0;var _0x35a9d1=_0x3b84[_0x4b315c];return _0x35a9d1;};var imagesArray=['dog.jpg','fox.jpg','mouse.jpg','alligator.jpg',_0x9aaf('0x0'),_0x9aaf('0x1'),_0x9aaf('0x2')];function displayImage(){var _0x3426d3=Math[_0x9aaf('0x3')](Math[_0x9aaf('0x4')]()*0x7);img='./'+imagesArray[_0x3426d3];var _0x19a6b2='<img\x20src=\x22'+img+_0x9aaf('0x5')+imagesArray[_0x3426d3]+'\x22>';document[_0x9aaf('0x6')]('here')['innerHTML']=_0x19a6b2;}
+  var imagesArray = ["dog.jpg", "fox.jpg", "mouse.jpg", "alligator.jpg", "fish.jpg", "parrot.jpg", "cat.jpg"];
+
+  function displayImage(){
+      var num = Math.floor(Math.random() * 7); // 0...6
+      img = './'+ imagesArray[num];
+      var imgStr = '<img src="' + img + '" alt = "' + imagesArray[num] + '">';
+      document.getElementById("here").innerHTML = imgStr
+  }
+
 
 
 </script>
