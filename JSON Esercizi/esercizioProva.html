@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use the XMLHttpRequest to get the content of a file.</h2>
+<p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+<p id="demo"></p>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    
+    document.getElementById("demo").innerHTML = "nome: "+myObj.name + " età: "+myObj.age + " numero di animali: "+myObj.pets.length;
+    
+    for(var i=0;i<=myObj.pets.length;i++)
+    {
+    document.getElementById("prova").innerHTML+=" tipo: "+myObj.pets[i].animal + " nome: "+myObj.pets[i].name;
+    }
+  }
+};
+xmlhttp.open("GET", "json_demo.txt", true);
+xmlhttp.send();
+
+
+</script>
+
+<p id="prova"></p>
+
+</body>
+</html>
