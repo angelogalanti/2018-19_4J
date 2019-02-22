@@ -1,0 +1,35 @@
+<!-- 
+LEGGI BENE LE SEGUENTI ISTRUZIONI
+
+PRIMA DI CONSEGNARE RINOMINA QUESTO FILE IN cognome.html
+CONSEGNA AL LINK DISPONIBILE SU GITHUB
+
+l'esercizio consiste di diverse parti se non riuscite a farne qualcuna non stateci troppo sopra
+
+ad esempio se non riuscite a generare i numeri casuali inserite dei valori statici
+ad esempio se non riuscite a fare la tabella inserite i numeri separati da una ',' o altro carattere
+ad esempio se non riuscite a fare la tabella intanto calcolate la somma dei numeri
+
+1. i numeri casuali della tabella sono tra 1 e 100
+2. il colore di sfondo e' rosso se il num e' divisibile per 3 
+3. il colore di sfondo e' blue se il num e' divisibile per 2
+4. il colore di sfondo e' bianco negli altri casi
+
+sintassi tabella HTML
+https://www.w3schools.com/html/html_tables.asp
+
+come cambiare il colore della cella della tabella:
+https://www.w3schools.com/html/html_styles.asp
+ -->
+<form name="tablegen">
+    <label>Rows: <input type="text" name="rows" id="rows"/></label><br />
+
+    <input name="generate" type="button" value="Create Table!" onclick='createTable();'/>
+</form>
+
+<div id="wrapper"></div>
+<div id="total"></div>
+
+<script type="text/javascript">
+var _0xd41f=["\x76\x61\x6C\x75\x65","\x72\x6F\x77\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x3C\x74\x61\x62\x6C\x65\x20\x62\x6F\x72\x64\x65\x72\x3D\x22\x22\x3E\x0A","","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x3C\x74\x72\x3E","\x72\x65\x64","\x62\x6C\x75\x65","\x77\x68\x69\x74\x65","\x3C\x74\x64\x20\x73\x74\x79\x6C\x65\x3D\x22\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x2D\x63\x6F\x6C\x6F\x72\x3A","\x22\x3E","\x20","\x3C\x2F\x74\x64\x3E","\x3C\x2F\x74\x72\x3E\x0A","\x3C\x2F\x74\x61\x62\x6C\x65\x3E","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x77\x72\x61\x70\x70\x65\x72","\x74\x6F\x74\x61\x6C","\x54\x6F\x74\x61\x6C\x3A\x20"];function createTable(){var _0xc389x2=0;var _0xc389x3=document[_0xd41f[2]](_0xd41f[1])[_0xd41f[0]];var _0xc389x4=_0xd41f[3];var _0xc389x5=_0xd41f[4];var _0xc389x6=function(_0xc389x7,_0xc389x8){return Math[_0xd41f[6]](Math[_0xd41f[5]]()* (_0xc389x8- _0xc389x7+ 1))+ _0xc389x7};for(var _0xc389x9=0;_0xc389x9< _0xc389x3;_0xc389x9++){_0xc389x5+= _0xd41f[7];for(var _0xc389xa=0;_0xc389xa< _0xc389x3;_0xc389xa++){var _0xc389xb=_0xc389x6(1,100);var _0xc389xc;_0xc389x2= _0xc389x2+ _0xc389xb;if(_0xc389xb% 3== 0){_0xc389xc= _0xd41f[8]}else {if(_0xc389xb% 2== 0){_0xc389xc= _0xd41f[9]}else {_0xc389xc= _0xd41f[10]}};_0xc389x5+= _0xd41f[11]+ _0xc389xc+ _0xd41f[12];_0xc389x5+= _0xd41f[13]+ _0xc389xb;_0xc389x5+= _0xd41f[14]};_0xc389x5+= _0xd41f[15]};var _0xc389xd=_0xd41f[16];document[_0xd41f[2]](_0xd41f[18])[_0xd41f[17]]= _0xc389x4+ _0xc389x5+ _0xc389xd;document[_0xd41f[2]](_0xd41f[19])[_0xd41f[17]]= _0xd41f[20]+ _0xc389x2}
+</script>
