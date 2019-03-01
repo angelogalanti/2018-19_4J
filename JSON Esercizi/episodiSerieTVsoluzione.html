@@ -1,0 +1,76 @@
+<!-- 
+ESERCIZIO 1
+mostrare i titoli di tutti gli episodi della prima stagione
+ESERCIZIO 2
+mostrare i titoli di tutti gli episodi della stagione
+inserita dall'utente tramite campo di input
+ESERCIZIO 3
+mostrare i titoli di tutti gli episodi della stagione e della serie
+inserite dall'utente tramite campi di input
+ -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>Get data as JSON from Tvmaze API.</h2>
+
+  <h4>Inserisci la serie che vuoi visualizzare</h4>
+  <input type="text" placeholder="Serie" value="" id="Serie"></input>
+  <button type="button" onclick="SalvaSerie()">Visualizza</button>
+
+  <h4>Inserisci la stagione che vuoi visualizzare</h4>
+  <input type="text" placeholder="Stagione" value="" id="numeroStagione"></input>
+  <button type="button" onclick="EpisodiStagioneInserita(myObj)">Visualizza</button>
+
+  <p id="demo"></p>
+  <p id="stagione"></p>
+  <p id="stagioneSerie"></p>
+
+  <script>
+    //http://api.tvmaze.com/show
+
+    var serie = "";
+    function SalvaSerie() {
+      serie = document.getElementById("Serie").value;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          myObj = JSON.parse(this.responseText);
+          document.getElementById("demo").innerHTML = "Episodi della prima stagione: <br>" + EpisodiPrimaStagione(myObj);
+        }
+      };
+      xmlhttp.open("GET", "http://api.tvmaze.com/singlesearch/shows?q=" + serie + "&embed=episodes", true);
+      xmlhttp.send();
+    }
+
+    function EpisodiPrimaStagione(myObj) {
+      var episodi = "";
+      for (i = 1; i < myObj._embedded.episodes.length; i++) {
+        if (myObj._embedded.episodes[i].season == 1) {
+          episodi = episodi + myObj._embedded.episodes[i].name + "<br>";
+        }
+      }
+      return episodi;
+    }
+
+    function EpisodiStagioneInserita(myObj) {
+      var episodi = "";
+      var stagioneRichiesta = document.getElementById("numeroStagione").value;
+      for (i = 1; i < myObj._embedded.episodes.length; i++) {
+        if (myObj._embedded.episodes[i].season == stagioneRichiesta) {
+          episodi = episodi + myObj._embedded.episodes[i].name + "<br>";
+        }
+      }
+      if (episodi == "") {
+        document.getElementById("stagione").innerHTML = "La stagione richiesta non e' disponibile";
+      }
+      else {
+        document.getElementById("stagione").innerHTML = "Episodi stagione inserita: <br>" + episodi;
+      }
+    }
+  </script>
+
+</body>
+
+</html>
