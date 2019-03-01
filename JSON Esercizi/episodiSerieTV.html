@@ -13,20 +13,45 @@ inserite dall'utente tramite campi di input
 <body>
 
 <h2>Get data as JSON from Tvmaze API.</h2>
+<form>
+  <input type="text" id="season">
+  <input type="text" id="show" value="westworld">
+  <input type="button" value="Ricerca" onClick="search()">
+</form>
 
 <p id="demo"></p>
 
 <script>
-var xmlhttp = new XMLHttpRequest();
 
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    myObj = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj._embedded.episodes[0].name;
+function search() {
+  
+  var xmlhttp = new XMLHttpRequest();
+  var show = document.getElementById('show').value;
+
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myObj = JSON.parse(this.responseText);
+        writeResult(myObj);
+    }
+  };
+  xmlhttp.open("GET", "http://api.tvmaze.com/singlesearch/shows?q=" + show + "&embed=episodes", true);
+  xmlhttp.send();
+
+}
+
+function writeResult(myObj) {
+  var result = '';
+  for (i = 0; i < myObj._embedded.episodes.length; i++){
+    document.getElementById("demo").innerHTML = myObj._embedded.episodes[i].name;
+    if (myObj._embedded.episodes[i].season == "1"){
+      result = result + myObj._embedded.episodes[i].name + '<br>';
+    }
   }
-};
-xmlhttp.open("GET", "http://api.tvmaze.com/singlesearch/shows?q=game-of-thrones&embed=episodes", true);
-xmlhttp.send();
+  document.getElementById("demo").innerHTML = result;
+}
+
+
+
 </script>
 
 </body>
