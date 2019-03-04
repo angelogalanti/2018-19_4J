@@ -1,0 +1,26 @@
+<!-- https://jsonplaceholder.typicode.com
+Crea una tabella che mostra  i commenti di un determinato post
+Il numero del post viene inserito dall'utente tramite campo di input
+Per ogni commento mostrare: name email e message
+-->
+<!doctype HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSONPlaceHolderViewer</title>
+</head>
+
+<body>
+  Inserisci il numero del post di cui vuoi visualizzare i commenti:
+  <form>
+   <input type="text" id="numeroScelto">
+   <input type="button" value="Ricerca" onClick="esegui()">
+ </form>
+ <table id="tabella" border="1px">
+ </table>
+ <script>
+
+var _0x3432=['readyState','status','parse','responseText','open','GET','https://jsonplaceholder.typicode.com/comments','getElementById','<tr\x20align=\x27center\x27><th>Post</th><th>Name</th><th>Email</th><th>Message</th></tr>','postId','<tr\x20align=\x27center\x27>','</td>','<td>','name','tabella','innerHTML','onreadystatechange'];(function(_0x3a1be7,_0x1a928d){var _0x2069c1=function(_0xb98d20){while(--_0xb98d20){_0x3a1be7['push'](_0x3a1be7['shift']());}};_0x2069c1(++_0x1a928d);}(_0x3432,0x197));var _0x3171=function(_0x36d797,_0x27e56d){_0x36d797=_0x36d797-0x0;var _0x1176fe=_0x3432[_0x36d797];return _0x1176fe;};function esegui(){var _0x3556ee=new XMLHttpRequest();_0x3556ee[_0x3171('0x0')]=function(){if(this[_0x3171('0x1')]==0x4&&this[_0x3171('0x2')]==0xc8){myObj=JSON[_0x3171('0x3')](this[_0x3171('0x4')]);scrivi(myObj);}};_0x3556ee[_0x3171('0x5')](_0x3171('0x6'),_0x3171('0x7'),!![]);_0x3556ee['send']();}function scrivi(_0x2c8c21){var _0xd3683f=document[_0x3171('0x8')]('numeroScelto')['value'];var _0x4f8fae=0x0;var _0x1da342=_0x3171('0x9');for(_0x4f8fae=0x0;_0x4f8fae<_0x2c8c21['length'];_0x4f8fae++){if(_0x2c8c21[_0x4f8fae][_0x3171('0xa')]==_0xd3683f){_0x1da342+=_0x3171('0xb');_0x1da342+='<td>'+_0x2c8c21[_0x4f8fae][_0x3171('0xa')]+_0x3171('0xc');_0x1da342+=_0x3171('0xd')+_0x2c8c21[_0x4f8fae][_0x3171('0xe')]+_0x3171('0xc');_0x1da342+=_0x3171('0xd')+_0x2c8c21[_0x4f8fae]['email']+_0x3171('0xc');_0x1da342+=_0x3171('0xd')+_0x2c8c21[_0x4f8fae]['body']+_0x3171('0xc');_0x1da342+='</tr>';}document[_0x3171('0x8')](_0x3171('0xf'))[_0x3171('0x10')]=_0x1da342;}}
+</script>
+</body>
+</html>
