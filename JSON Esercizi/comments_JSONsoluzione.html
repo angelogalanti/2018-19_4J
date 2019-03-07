@@ -21,8 +21,6 @@
 				myObj = JSON.parse(this.responseText);				  
 				scrivi(myObj);
 			  }
-				//else 
-					//document.getElementById("tabella").innerHTML = "Tomma nun funziona un cazzo";
 			};
 			xmlhttp.open("GET", "https://jsonplaceholder.typicode.com/comments", true);
 			xmlhttp.send();
