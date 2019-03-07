@@ -1,0 +1,27 @@
+<!-- 
+http://api.population.io/1.0/population/Italy/today-and-tomorrow/?format=json
+scaricare il file popolazione.json ed inserirlo nella stessa cartella di questo file
+se nella console compare l'errore:
+Error: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+è necessario usare xampp
+
+l'esercizio deve mostrare a video la differenza tra la popolazione di oggi e quella di ieri:
+Oggi in Italia ci sono xxx persone in meno di ieri
+Oggi in Italia ci sono xxx persone in più di ieri
+Oggi in Italia ci sono le stesse persone di ieri
+
+ -->
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Esercizio 2</title>
+</head>
+
+<body>
+	<p id="differenzaPersone"></p>
+	<script>
+var _0x4ac2=['GET','popolazione.json','send','log','total_population','population','Oggi\x20in\x20Italia\x20ci\x20sono\x20','\x20persone\x20in\x20meno\x20di\x20ieri','Oggi\x20in\x20Italia\x20ci\x20sono\x20le\x20stesse\x20persone\x20di\x20ieri','innerHTML','onreadystatechange','responseText','open'];(function(_0x1de7c8,_0x3d059b){var _0x5b6b44=function(_0x494fe9){while(--_0x494fe9){_0x1de7c8['push'](_0x1de7c8['shift']());}};_0x5b6b44(++_0x3d059b);}(_0x4ac2,0x183));var _0x4e01=function(_0x5069a7,_0x52fe6b){_0x5069a7=_0x5069a7-0x0;var _0x51ecba=_0x4ac2[_0x5069a7];return _0x51ecba;};var xmlhttp=new XMLHttpRequest();xmlhttp[_0x4e01('0x0')]=function(){if(this['readyState']==0x4&&this['status']==0xc8){myObj=JSON['parse'](this[_0x4e01('0x1')]);scriviPersone(myObj);}};xmlhttp[_0x4e01('0x2')](_0x4e01('0x3'),_0x4e01('0x4'),!![]);xmlhttp[_0x4e01('0x5')]();function scriviPersone(_0x36ebf8){console[_0x4e01('0x6')](_0x36ebf8);var _0x43da71=_0x36ebf8[_0x4e01('0x7')][0x0][_0x4e01('0x8')];var _0x3f3c08=_0x36ebf8[_0x4e01('0x7')][0x1][_0x4e01('0x8')];var _0x30f8ec=_0x3f3c08-_0x43da71;var _0x2bcf0b='';if(_0x30f8ec>0x0){_0x2bcf0b=_0x4e01('0x9')+_0x30f8ec+'\x20persone\x20in\x20più\x20di\x20ieri';}else if(_0x30f8ec<0x0){_0x2bcf0b=_0x4e01('0x9')+Math['abs'](_0x30f8ec)+_0x4e01('0xa');}else{_0x2bcf0b=_0x4e01('0xb');}document['getElementById']('differenzaPersone')[_0x4e01('0xc')]=_0x2bcf0b;}
+	</script>
+</body>
+</html>
