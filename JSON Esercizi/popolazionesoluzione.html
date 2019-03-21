@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>Esercizio 2</title>
+</head>
+
+<body>
+	<p id="differenzaPersone"></p>
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+			myObj = JSON.parse(this.responseText);
+			scriviPersone(myObj);
+		  }
+		};
+    // Error: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+    // xmlhttp.open("GET", "http://api.population.io/1.0/population/Italy/today-and-tomorrow/?format=json", true);
+    xmlhttp.open("GET", "popolazione.json", true);
+		xmlhttp.send();
+		
+		
+		function scriviPersone(myObj){
+
+			console.log(myObj);
+			var personeIeri = myObj.total_population[0].population;
+			var personeOggi = myObj.total_population[1].population;
+			
+			var differenza = personeOggi - personeIeri;
+			
+      var result = '';
+			if (differenza > 0) {
+        result = 'Oggi in Italia ci sono ' + differenza + ' persone in più di ieri'
+      } else if (differenza < 0) {
+        result = 'Oggi in Italia ci sono ' + Math.abs(differenza) + ' persone in meno di ieri'
+      } else {
+        result = 'Oggi in Italia ci sono le stesse persone di ieri'
+      }
+      document.getElementById("differenzaPersone").innerHTML = result;
+		}
+	</script>
+</body>
+</html>
