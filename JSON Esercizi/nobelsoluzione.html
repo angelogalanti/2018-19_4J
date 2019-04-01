@@ -1,0 +1,79 @@
+<!-- 
+IL FILE JSON DA SCARICARE TRAMITE CHIAMATA AJAX SI TROVA QUI
+http://api.nobelprize.org/v1/laureate.json
+APRIRE IL FILE JSON CON FIREFOX PERCHE' LO FORMATTA CORRETTAMENTE
+1 STAMPARE IL COGNOME DI UN VINCITORE DI NOBEL
+2 STAMPARE IL COGNOME DI UN VINCITORE DI NOBEL ITALIANO
+3 STAMPARE IL COGNOME DI TUTTI I VINCITORI DI NOBEL ITALIANI
+4 STAMPARE IL NUMERO DI TUTTI I VINCITORI DI NOBEL ITALIANI
+5 STAMPARE IL NUMERO DI UOMINI E DONNE VINCITORI DI NOBEL ITALIANI
+6 COLORARE DI BLU GLI UOMINI E ROSA LE DONNE
+7 SELEZIONARE LA NAZIONALITA' DEI VINCITORI TRAMITE DROPDOWN MENU'
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esercizio</title>
+  <meta charset="UTF-8">
+  <style type="text/css">
+    .female {
+      color: pink;
+    }
+    .male {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <select id="selectBox" onchange="changeFunc(value);">
+   <option value="IT">Italy</option>
+   <option value="FR">France</option>
+   <option value="DK">Denmark</option>
+   <option value="LT">Lithuania</option>
+   <option value="YE">Yemen</option>
+   <option value="UG">Uganda</option>
+  </select>
+  <p id="howMany"></p>
+  <p id="maleOrFemale"></p>
+  <p id="nameSurname"></p>
+  <script>
+    var myObj = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      myObj = JSON.parse(this.responseText);
+      }
+    };
+    xmlhttp.open("GET", "http://api.nobelprize.org/v1/laureate.json", true);
+    xmlhttp.send();
+    
+    
+    function changeFunc(value){
+
+      console.log(myObj);
+      var result = '';
+      var howMany = 0;
+      var male = 0;
+      for (var i = 0; i < myObj.laureates.length; i++) {
+        if (myObj.laureates[i].bornCountryCode == value) {
+          howMany++;
+          if (myObj.laureates[i].gender == 'male') {
+            male++;
+            result = result + '<div class="male">' 
+            + myObj.laureates[i].surname + '</div>';
+          } else {
+            result = result + '<div class="female">' 
+            + myObj.laureates[i].surname + '</div>';
+          }
+        }
+      }
+
+      document.getElementById("howMany").innerHTML = "There are " + howMany + " nobel prize winners";
+      document.getElementById("maleOrFemale").innerHTML = male + ' males and ' + (howMany - male) + ' females';
+      document.getElementById("nameSurname").innerHTML = result;
+    }
+  </script>
+</body>
+</html>
