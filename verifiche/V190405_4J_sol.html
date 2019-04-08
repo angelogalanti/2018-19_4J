@@ -1,0 +1,106 @@
+<!-- 
+IL FILE JSON DA SCARICARE TRAMITE CHIAMATA AJAX SI TROVA QUI
+http://api.worldbank.org/countries/CHN/indicators/SP.POP.TOTL?per_page=5000&format=json
+IL FILE CONTIENE UNO STORICO DELLA POPOLAZIONE CINESE DAL 1960 AD OGGI
+APRIRE IL FILE JSON CON FIREFOX PERCHE' LO FORMATTA CORRETTAMENTE
+DOPO AVER RISOLTO UN PUNTO DELLA VERIFICA COMMENTARLO E PROCEDERE CON IL SUCCESSIVO
+1 STAMPARE LA POPOLAZIONE DELL'ANNO 2017
+2 STAMPARE DIFFERENZA DELLA POPOLAZIONE DAL 2017 AL 1960
+3 STAMPARE L'ANNO IN CUI LA POPOLAZIONE HA SUPERATO 1 MILIARDO
+  (NON USARE UN INDICE STATICO MA CERCARE NEL FILE QUANDO LA CONDIZIONE E' VERIFICATA)
+4 STAMPARE LA POPOLAZIONE DI TUTTI GLI ANNI (UNA RIGA PER OGNI NUMERO)
+  COLORARE DI VERDE I NUMERI INFERIORI AL MILIARDO
+  COLORARE DI ROSSO I NUMERI SUPERIORI AL MILIARDO
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Esercizio</title>
+  <meta charset="UTF-8">
+  <style type="text/css">
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="result"></p>
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        // Esercizio1(myObj);
+        // Esercizio2(myObj);
+        Esercizio3(myObj);
+        // Esercizio4(myObj);
+      }
+    };
+    xmlhttp.open("GET", "SP.POP.json", true);
+    xmlhttp.send();
+
+    //PUNTO 1
+    function Esercizio1(myObj) {
+      risultato = "";
+      for (i = 0; i < myObj[1].length; i++) {
+        if (myObj[1][i].date == "2017") {
+          risultato = myObj[1][i].value;
+        }
+      }
+      document.getElementById("result").innerHTML = risultato;
+    }
+
+    //PUNTO 2
+    function Esercizio2(myObj) {
+      var popolazione1960 = 0;
+      var popolazione2017 = 0;
+      for (i = 0; i < myObj[1].length; i++) {
+        if (myObj[1][i].date == "2017") {
+          popolazione2017 = myObj[1][i].value;
+        }
+        if (myObj[1][i].date == "1960") {
+            popolazione1960 = myObj[1][i].value;
+          }
+        }
+      document.getElementById("result").innerHTML = popolazione2017 - popolazione1960;
+    }
+
+    //PUNTO 3
+    function Esercizio3(myObj) {
+      var risultato = "";
+      for (i = myObj[1].length-1; i > 0 ; i--) {
+        if (parseInt(myObj[1][i].value) > 1000000000) {
+          risultato = myObj[1][i].date;
+          break;
+        }
+      }
+      document.getElementById("result").innerHTML = risultato;
+    }
+
+    //PUNTO 4
+    function Esercizio4(myObj) {
+      var risultato = "<table>";
+      for (i = 0; i < myObj[1].length; i++) {
+        if (parseInt(myObj[1][i].value) >= 1000000000) {
+          colore = "red";
+        }
+        else {
+          colore = "green";
+        }
+        risultato = risultato + "<tr> <td class=" + colore + ">" + myObj[1][i].value + "</td> </tr>";
+      }
+      risultato = risultato + "</table>";
+      document.getElementById("result").innerHTML = risultato;
+    }
+  </script>
+</body>
+
+</html>
